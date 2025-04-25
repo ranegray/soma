@@ -1,39 +1,34 @@
-# H1.Soma
+# h1.soma
 
-**H1.Soma** is a real-time dashboard and visualization interface for the Unitree H1-2 humanoid robot. It provides insight into the robot's motor states, IMU readings, control status, and overall physical performance during live experiments or development sessions.
+**h1.soma** is a dashboard that shows you what's happening with the unitree h1-2 robot in real-time. you can see motor states, sensor readings, and how the robot's performing while you're working with it.
 
-This tool is designed to help researchers, developers, and engineers in the Correll Lab observe, debug, and better understand the behavior and state of the H1 platform.
+we built this to help us see what's going on with the h1 during experiments in the correll lab.
 
-## Why the Name?
+## why "soma"?
 
-> **“Soma”** comes from the Greek word for *body*. In robotics and neuroscience, it often refers to the embodied physical system — the hardware that moves, senses, and interacts with the world.
+"soma" is greek for "body." it's like a window into the robot's physical being - showing you how it moves and what it's experiencing as it happens.
 
-In the context of the H1 robot, **H1.Soma** represents a live window into the *body* of the machine — showing how it moves, how it reacts, and what it experiences in real time.
+## what it does
 
-## What It Does
+- subscribes to ros topics from a web server running directly on the h1-2 robot
+- visualizes the robot's data through a custom web ui
+- displays real-time info like:
+  - motor angles, speeds, and torques
+  - orientation data
+  - sensor readings
+  - battery and cpu status
+- lets you monitor the robot remotely through any browser
+- provides a simple interface for debugging and development
 
-- Connects to a WebSocket server streaming robot state data (`rt/lowstate`)
-- Displays real-time telemetry from the H1-2 robot:
-  - Motor angles, speeds, and torques
-  - IMU orientation (quaternion and RPY)
-  - Accelerometer and gyroscope readings
-  - CPU and battery status
-- Provides a live feed of raw state data for debugging
-- Clean, responsive web UI built with React + Tailwind
+## tech we used
 
-## Future Additions
-
-- Live control input preview via `rt/lowcmd`
-- Per-joint plots or gait overlays
-- 3D visualization of robot pose (via Three.js or Unity WebView)
-
-## Tech Stack
-
-- React (Vite)
-- Tailwind CSS
-- WebSocket API (Browser-native)
-- FastAPI WebSocket backend (Python simulator)
+- react (vite)
+- typescript
+- tailwind
+- react-router
+- roslibjs
+- rosbridge
 
 ---
 
-*Made for the Correll Lab — CU Boulder Robotics.*
+_made for the correll lab_
