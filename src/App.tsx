@@ -1,7 +1,8 @@
 function App() {
   return (
     <div>
-      <h1>Dashboard</h1>
+      {/* Add input for rosbridge web socket address by user */}
+      
     </div>
   );
 }
