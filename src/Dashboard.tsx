@@ -33,14 +33,15 @@ interface TopicInfo {
 }
 
 // const humanoidRobot: string = '192.168.123.4';
-const createRobot: string = '10.0.0.195';
+// const createRobot: string = '10.0.0.195';
+const rgrl : string = '10.0.0.120';
 
 function Dashboard() {
   const [rosStatus, setRosStatus] = useState<string>('Disconnected');
   const [robotMessage, setRobotMessage] = useState<
     RosBatteryStateMessage | string
   >('No message yet'); // For /battery_state
-  const rosBridgeUrl = `ws://${createRobot}:9090`;
+  const rosBridgeUrl = `ws://${rgrl}:9090`;
 
   const [availableTopics, setAvailableTopics] = useState<TopicInfo[]>([]);
   const [selectedTopicName, setSelectedTopicName] = useState<string>('');
